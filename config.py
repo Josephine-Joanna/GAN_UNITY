@@ -10,7 +10,7 @@ def parse_args():
                                                                              'wrinkle_extraction'
                                                                              'Stress_fiber_extraction'
                                                                              'Contour_extraction')
-    parser.add_argument('--batch_size', type=int, default=32, help='訓練batch_size')
+    parser.add_argument('--batch_size', type=int, default=4, help='訓練batch_size')
     parser.add_argument('--validation_size', type=int, default=64, help='訓練中評価数')
     parser.add_argument('--ngf', type=int, default=64)
     parser.add_argument('--ndf', type=int, default=64)
@@ -24,7 +24,7 @@ def parse_args():
     parser.add_argument('--beta2', type=float, default=0.999, help='beta2 for Adam optimizer')
     parser.add_argument('--augmentation_prob', type=float, default=1.0, help='augmentation')
     parser.add_argument('--RGB', type=bool, default=False,  help='是否RGB')
-    parser.add_argument('--WGANGP', type=bool, default=False, help='是否WGAN-GP')
+    parser.add_argument('--WGANGP', type=bool, default=True, help='是否WGAN-GP')
     parser.add_argument('--multi_D', type=bool, default=False, help='是否多尺度判別器')
     parser.add_argument('--generator', type=str, default='pix2pixHD', help='ネットワーク種類:'
                                                                            'U-Net'
